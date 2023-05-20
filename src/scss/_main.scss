@@ -1,0 +1,217 @@
+.section {
+	// .section__main
+	&__main {
+		padding-top: rem(370);
+		padding-bottom: rem(228);
+		min-height: rem(1080);
+		background: url("../img/main/bg.png") center / cover no-repeat;
+		@media (max-width: $breakpoint768) {
+			min-height: unset;
+			padding-top: rem(170);
+			padding-bottom: rem(170);
+		}
+	}
+	// .section__about
+	&__about {
+		.container {
+			max-width: 1600px;
+			margin: 80px auto;
+			padding: 16px 12px;
+			background: rgba(205, 168, 97, 0.1);
+			box-shadow: 0px 14px 44px rgba(0, 0, 0, 0.03);
+			border-radius: 50px;
+		}
+	}
+  // .section__products
+  &__products {
+		margin-top: rem(80);
+		margin-bottom: rem(80);
+  }
+	// .section__deals
+	&__deals {
+		margin: 0 auto;
+		max-width: rem(1520);
+		min-height: rem(767);
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.052) 0.01%), url(../img/deals//bg.jpg) center / cover no-repeat;
+		border: 5px solid #AACACD;
+		border-radius: 50px;
+	}
+}
+.main {
+	// .main__content
+	&__content {
+		max-width: rem(660);
+	}
+	// .main__title
+	&__title {
+		font-family: "Montserrat";
+		font-weight: 600;
+		font-size: rem(76);
+		line-height: math.div(93, 76);
+		span {
+			color: $accentColor;
+			text-decoration-line: underline;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+		}
+		@media (max-width: $breakpoint768) {
+			&:not(:last-child) {
+				margin-bottom: rem(20);
+			}
+		}
+	}
+	// .main__text
+	&__text {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 26px;
+		opacity: 0.8;
+		max-width: rem(490);
+		&:not(:last-child) {
+			margin-bottom: rem(60);
+		}
+		@media (max-width: $breakpoint768) {
+			&:not(:last-child) {
+				margin-bottom: rem(30);
+			}
+		}
+	}
+	// .main__button
+	&__button {
+	}
+}
+
+.about {
+	// .about__row
+	&__row {
+    display: flex;
+    align-items: center;
+    position: relative;
+    @media (max-width:$breakpoint992){
+      flex-direction: column;
+    }
+    &::before{
+      content:url(../img/about/before.svg);
+      position: absolute;
+      bottom: -100px;
+      left: -116px;
+      z-index: 2;
+    }
+	}
+	// .about__column
+	&__column {
+		display: flex;
+    gap: rem(20);
+    flex: 0 0 48%;
+    @media (max-width:$breakpoint992){
+     flex: 0 0 100%;
+    }
+	}
+	// .about__image
+	&__image {
+    @media (max-width:$breakpoint992){
+        display: none;
+    }
+    img {
+      max-width: 100%;
+    }
+	}
+	// .about__content
+	&__content {
+    max-width: rem(510);
+	}
+  // .about__bg
+  &__bg {
+    position: absolute;
+    z-index: -1;
+    top: 30.5%;
+    right: .75%;
+    width: 18.5625rem;
+    height: 21.125rem;
+    overflow: hidden;
+  }
+	// .about__title
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	// .about__subtitle
+	&__subtitle {
+		font-family: "Montserrat";
+		font-style: normal;
+		font-weight: 600;
+		font-size: 76px;
+		line-height: 93px;
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+		}
+	}
+	// .about__text
+	&__text {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 26px;
+		opacity: 0.8;
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+		}
+	}
+	// .about__button
+	&__button {
+	}
+}
+
+.products {
+	// .products__top
+	&__top {
+		text-align: center;
+	}
+	// .products__title
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	// .products__subtitle
+	&__subtitle {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 26px;
+		opacity: 0.8;
+	}
+	// .products__row
+	&__row {
+		position: relative;
+	}
+	// .products__swiper
+	&__swiper {
+		max-width: rem(1600);
+		margin: 0 auto;
+	}
+	// .products__wrapper
+	&__wrapper {
+		padding-top: rem(68);
+	}
+	// .products__slide
+	&__slide {
+	}
+}
+
+.deals {
+	// .deals__body
+	&__body {
+	}
+	// .deals__title
+	&__title {
+	}
+	// .deals__countdown
+	&__countdown {
+	}
+	// .deals__button
+	&__button {
+	}
+}
+.countdown {
+}

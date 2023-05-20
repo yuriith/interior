@@ -1,0 +1,187 @@
+.button {
+  display: inline-flex;
+  font-weight: 700;
+  font-family: $fontSecondary;
+  font-size: rem(22);
+  line-height: math.div(26 , 22);
+  padding: rem(15) rem(23);
+  border-radius: rem(50);
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  border: rem(2) solid $accentColor;
+  @media (any-hover: hover){
+    &:hover{
+      transform: scale(0.97);
+    }
+  }
+  &:active{
+    transform: scale(1.02);
+  }
+  &__outline {
+    color: $secondaryColor;
+    @media (any-hover: hover){
+      &:hover{
+        color: $mainColor;
+      }
+    }
+  }
+  &__filled{
+    background-color: $accentColor;
+    color: $mainColor;
+    @media (any-hover: hover){
+      &:hover{
+        color: $secondaryColor;
+      }
+    }
+  }
+}
+
+.link {
+  display: inline-flex;
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover){
+    &:hover{
+      text-decoration: underline;
+      color: darken($accentColor, 10);
+    }
+  }
+}
+
+.title {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: rem(30);
+  line-height: math.div(37 , 30);
+  position: relative;
+  display: inline-flex;
+  padding-bottom: rem(10);
+  &::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $accentColor;
+  }
+  @media (max-width:$breakpoint768){
+      font-size: rem(26);
+  }
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  max-width: rem(260);
+  cursor: pointer;
+  @media (any-hover: hover){
+    &:hover{
+      .card__top {
+        background-color: $accentColor;
+      }
+    }
+  }
+	// .card__top
+	&__top {
+    padding: 106px 0 15px 0;
+    background-color: #f2f1f1;
+    border-radius: 30px;
+    width: 100%;
+    position: relative;
+    transition: background-color 0.3s ease 0s;
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+	}
+	// .card__image
+	&__image {
+    z-index: 2;
+    position: absolute;
+    top: -2.3125rem;
+    left: 50%;
+    transform: translate(-50%,0);
+	}
+	// .card__title
+	&__title {
+    background: #F2F1F1;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    background: transparent;
+	}
+	// .card__rating
+	&__rating {
+	}
+	// .card__price
+	&__price {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    &:not(:last-child) {
+      margin-bottom: rem(17);
+    }
+	}
+	// .card__descr
+	&__descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+	}
+	// .card__button
+	&__button {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    padding: 15px 45px;
+    color: #34383D;
+    @media (any-hover: hover){
+      &:hover{
+        .card & {
+          .card__top {
+            background-color: $accentColor;
+          }
+        }
+        background: $accentColor;
+      }
+    }
+	}
+}
+
+.swiper {
+  // .swiper__btn
+  &__btn {
+    position: absolute;
+    z-index: 50;
+    height: rem(48);
+    width: rem(48);
+    border-radius: 50%;
+    background-color: $accentColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &.swiper-button-disabled{
+      cursor: not-allowed;
+      svg  {
+        opacity: 0.3;
+      }
+    }
+    &.prev {
+      transform: rotate(-180deg);
+      top: 50%;
+      left: -36px;
+    }
+    &.next {
+      top: 50%;
+      right: -36px;
+    }
+  }
+}
